@@ -1,0 +1,31 @@
+POST http://127.0.0.1:8629/api/adminLogon/register
+Content-Type: application/json
+
+{
+    "email":"test1@gmail.com",
+    "password":"password1"
+}
+
+###
+POST http://127.0.0.1:8629/api/adminLogon
+Content-Type: application/json
+
+{
+    "email":"test1@gmail.com",
+    "password":"password1"
+}
+
+###
+GET http://127.0.0.1:8629/api/home
+
+###
+POST http://127.0.0.1:8629/api/userRegister
+Content-Type: application/json
+
+{
+    "firstName":"Vamsi",
+    "lastName":"Krishna",
+    "phoneNumber":918246545,
+    "address":"17/575 guntakal",
+    "SSN":564654657
+}
