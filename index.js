@@ -5,6 +5,8 @@ const express = require("express")
 const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const helmet = require("helmet");
+const compression = require("compression");
 
 const AdminLoginrouter = require("./src/routers/adminLogon");
 const UserRegisterrouter = require("./src/routers/userRegistration");
@@ -13,7 +15,8 @@ const PORTVAL = process.env.PORT||8632;
 
 app.use(cors());
 app.use(bodyParser.json()); // request body is handled and coverted to json format
-
+app.use(helmet());
+app.use(compression());
 
 app.use("/api/adminLogon",AdminLoginrouter);
 app.use("/api/userRegister",UserRegisterrouter);
